@@ -8,6 +8,7 @@ module.exports = {
     filename: "[name].js",
   },
   module: {
+    // Exlude node_modules and use babel loader
     rules: [
       {
         test: /\.js$/,
