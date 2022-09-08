@@ -18,5 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api.urls'))
+    path('api/', include('api.urls')),
+    # Send all urls that aren't admin or backend to frontend urls to handle
+    path('', include('frontend.urls'))
 ]
