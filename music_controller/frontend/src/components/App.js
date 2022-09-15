@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
+import HomePage from './HomePage';
+import RoomJoinPage from "./RoomJoinPage";
+import CreateRoomPage from "./CreateRoomPage";
 
 // NOTE: Refactor to Functional Componenets in future
 export default class App extends Component {
@@ -8,9 +11,13 @@ export default class App extends Component {
     }
 
     render() {
-        return (<h1>Hello, {this.props.name}</h1>);
+        return (
+        <div>
+         <HomePage />
+        </div>
+        )
     }
 }
 
 const appDiv = document.getElementById("app");
-render(<App name="Sam"/>, appDiv);
+render(<App />, appDiv);
