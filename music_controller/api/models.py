@@ -17,7 +17,7 @@ def generate_unique_code():
 class Room(models.Model):
     # Define Room components and associated constraints - Code, Host, Guest Privledges
         # Note: Explore additional fields and their constraints in Django Documentation
-    code = models.CharField(max_length=7, default="", unique=True)
+    code = models.CharField(max_length=7, default=generate_unique_code, unique=True)
     host = models.CharField(max_length=50, unique=True)
     guest_can_pause = models.BooleanField(null=False, default=False)
     votes_to_skip = models.IntegerField(null=False, default=2)
